@@ -2,12 +2,12 @@ function clear(){
     document.getElementById("display").value = "";
 }
 
-function displayText(input){
+function displayText(value){
     document.getElementById("display").value += value;
 }
 
 function equation(){
-    let num1 = document.getElementById("display").value;
-    let result = eval(num1);
+    var num1 = document.getElementById("display").value;
+    var result = eval(num1);
     document.getElementById("display").value = result;
 }

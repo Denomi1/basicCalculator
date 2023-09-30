@@ -40,20 +40,6 @@
             <div><button id="clear" onclick="clear()">AC</button></div>
         </div>
 
-        <script>
-            function clear(){
-                document.getElementById("display").value = "";
-            }
-
-            function displayText(input){
-                document.getElementById("display").value += value;
-            }
-
-            function equation(){
-                let num1 = document.getElementById("display").value;
-                let result = eval(num1);
-                document.getElementById("display").value = result;
-            }
-        </script>
+        <script src="calculation.js"></script>
     </body>
 </html>
