@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Calculator</title>
+        <link rel="stylesheet" href="formatting.css">
+    </head>
+
+    <body>
+        <div class="bigBox">
+            <div class="inputSection"> 
+                <input type="text" id="display" value="">
+            </div>
+            <div class="buttonFormatting">
+                <button id="num7" onclick="displayText('7')">7</button>
+                <button id="num8" onclick="displayText('8')">8</button>
+                <button id="num9" onclick="displayText('9')">9</button>
+                <button id="divi" onclick="displayText('/')">/</button>
+            </div>
+
+            <div class="buttonFormatting">
+                <button id="num4" onclick="displayText('4')">4</button>
+                <button id="num5" onclick="displayText('5')">5</button>
+                <button id="num6" onclick="displayText('6')">6</button>
+                <button id="mult" onclick="displayText('*')">*</button>
+            </div>
+            
+            <div class="buttonFormatting">
+                <button id="num1" onclick="displayText('1')">1</button>
+                <button id="num2" onclick="displayText('2')">2</button>
+                <button id="num3" onclick="displayText('3')">3</button>
+                <button id="subt" onclick="displayText('-')">-</button>
+            </div>
+
+            <div class="buttonFormatting">
+                <button id="num0" onclick="displayText('0')">0</button>
+                <button id="dot" onclick="displayText('.')">.</button>
+                <button id="equal" onClick="equation()">=</button>
+                <button id="sum" onclick="displayText('+')">+</button>
+            </div>
+            <div><button id="clear" onclick="clear()">AC</button></div>
+        </div>
+
+        <script>
+            function clear(){
+                document.getElementById("display").value = "";
+            }
+
+            function displayText(input){
+                document.getElementById("display").value += value;
+            }
+
+            function equation(){
+                let num1 = document.getElementById("display").value;
+                let result = eval(num1);
+                document.getElementById("display").value = result;
+            }
+        </script>
+    </body>
+</html>
